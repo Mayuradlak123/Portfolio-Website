@@ -1,0 +1,30 @@
+* {
+    scroll-behavior: smooth;
+}
+
+.skill-main {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: #0f172a;
+    font-size: 18px;
+}
+
+.skill img {
+    background-position: center;
+    background-size: cover;
+    height: 20vh;
+    width: 100%;
+}
+
+.skill {
+    border-radius: 15px;
+    background-color: white;
+    height: 10%;
+    width: 13%;
+    margin: 1%;
+    padding: 0.5%;
+}
