@@ -235,9 +235,70 @@ function Portfolio() {
             <Skills Images={Spring} Title="Spring Boot" />
           </div>{" "}
         </div>
+        <div className="project w-full flex justify-center item-center h-auto mt-8">
+          <div className="w-1/5  h-[20vh]">
+            <img className="" src={ReactImage} alt="Project" />
+            <div className="p-2 w-full ">
+              <h3 className="text-xl text-white font-medium">News Web Application</h3>
 
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+          <div className="w-1/5">
+            <img className="" src={ReactImage} alt="Project" />
+            <div className="p-2 w-full ">
+              <h3 className="text-xl text-white font-medium">News Web Application</h3>
+
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+          <div className="w-1/5">
+            <img className="" src={ReactImage} alt="Project" />
+            <div className="p-2 w-full ">
+              <h3 className="text-xl text-white font-medium">News Web Application</h3>
+
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+          <div className="w-1/5">
+            <img className="" src={ReactImage} alt="Project" />
+            <div className="p-2 w-full ">
+              <h3 className="text-xl text-white font-medium">News Web Application</h3>
+
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
         <div className="mt-8" id="contact">
-        <h2 className="text-3xl text-white border-green border-solid border-b-2">
+          <h2 className="text-3xl text-white border-green border-solid border-b-2">
             Contact me
           </h2>
           <form className="max-w-md mx-auto mt-4">
