@@ -22,18 +22,13 @@ import Git from "./Logos/git.png";
 import Python from "./Logos/Python.png";
 import Tail from "./Logos/Tail.png";
 import AWS from "./Logos/AWS.png";
-//Project Image
-import axios from "axios";
-import resumePath from "./files/Resume.docx";
 import NewsImage from "./Logos/News-App.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {
-  FaPhone,
-  FaEnvelope,
   FaFacebook,
   FaTwitter,
-  FaInstagram,
+
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa";
@@ -45,12 +40,9 @@ function Portfolio() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
 
-  const handleHover = () => {
-    setIsHovered(!isHovered);
-  };
-  const widthClassName = isHovered ? "w-32" : "w-16";
+
   const experiences = [
     {
       company: "RedGates IT Solution",
@@ -117,7 +109,7 @@ function Portfolio() {
         setEmail("")
         setName("")
         setMessage("")
-        toast.success("Message Sent Successfully");
+        toast.success(toastOption,"Message Sent Successfully");
       })
       .catch((err) => {
         toast.error("Failed to Send Message ");
@@ -248,8 +240,8 @@ theme="light"
                 onClick={handleDownload}
               >
                 <a href={resumePath} download>
-                  {" "}
-                  Download Resume{" "}
+                  
+                  Download Resume
                 </a>
               </button>
             </div>
@@ -345,7 +337,7 @@ theme="light"
             <Skills Images={SQL} Title="MySQL" />
             <Skills Images={AWS} Title="AWS" />
             <Skills Images={Spring} Title="Spring Boot" />
-          </div>{" "}
+          </div>
         </div>
         <h2
           className="text-3xl text-white border-green border-solid mt-8"
@@ -363,8 +355,7 @@ theme="light"
 
               <a
                 href="https://www.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noreferrer"
                 className="text-blue-500 hover:underline"
               >
                 View Project
@@ -380,8 +371,7 @@ theme="light"
 
               <a
                 href="https://www.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noreferrer"
                 className="text-blue-500 hover:underline"
               >
                 View Project
@@ -397,8 +387,7 @@ theme="light"
 
               <a
                 href="https://www.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noreferrer"
                 className="text-blue-500 hover:underline"
               >
                 View Project
@@ -414,8 +403,8 @@ theme="light"
 
               <a
                 href="https://www.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noreferrer"
+                
                 className="text-blue-500 hover:underline"
               >
                 View Project
@@ -523,19 +512,19 @@ theme="light"
             <div className="mb-4 md:mb-0">
               <h3 className="text-xl font-bold">Contact</h3>
               <p className="mt-2 text-xl">
-                {" "}
-                Phone:{" "}
-                <a href="tel:9098002830" target="_blank">
-                  +91 9098002830{" "}
+                
+                Phone:
+                <a href="tel:9098002830" target="_blank" rel="noreferrer">
+                  +91 9098002830
                 </a>
               </p>
               <p className="text-xl">
-                Email:{" "}
+                Email:
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=mayuradlak030@gmail.com"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                 >
-                  {" "}
+                  
                   mayuradlak030@gmail.com
                 </a>
               </p>
@@ -543,21 +532,21 @@ theme="light"
             <div className="flex justify-center flex-col items-center ">
               <div className="text-2xl">Contact on Social Media</div>
               <div className="flex ">
-                <a href="https://www.facebook.com/mayur.adlak.10/">
-                  {" "}
-                  <FaFacebook color=" #3b5998" className="text-4xl m-4" />{" "}
+                <a href="https://www.facebook.com/mayur.adlak.10/" target="_blank" rel="noreferrer">
+                  
+                  <FaFacebook color=" #3b5998" className="text-4xl m-4" />
                 </a>
-                <a href="https://www.linkedin.com/in/mayur-adlak-31b962220/">
-                  {" "}
-                  <FaLinkedin color="#0A66C2" className="text-4xl m-4" />{" "}
+                <a href="https://www.linkedin.com/in/mayur-adlak-31b962220/" target="_blank" rel="noreferrer">
+                  
+                  <FaLinkedin color="#0A66C2" className="text-4xl m-4" />
                 </a>
-                <a href="https://github.com/Mayuradlak123">
-                  {" "}
-                  <FaGithub color="#171515" className="text-4xl m-4" />{" "}
+                <a href="https://github.com/Mayuradlak123" target="_blank" rel="noreferrer">
+                  
+                  <FaGithub color="#171515" className="text-4xl m-4" />
                 </a>
-                <a href="https://twitter.com/MayurAdlak">
-                  {" "}
-                  <FaTwitter color="#00acee" className="text-4xl m-4" />{" "}
+                <a href="https://twitter.com/MayurAdlak" target="_blank" rel="noreferrer">
+                  
+                  <FaTwitter color="#00acee" className="text-4xl m-4" />
                 </a>
               </div>
             </div>
@@ -591,20 +580,12 @@ const Skills = ({ Title, Images }) => {
   return (
     <>
       <div className="skill">
-        <img className="rounded-2xl" src={Images} alt="Card Image" />
+        <img className="rounded-2xl" src={Images} alt="BigCo Inc. logo" />
         <h3 className="">{Title}</h3>
       </div>
     </>
   );
 };
-const BreakPoint = ({ Text }) => {
-  return (
-    <>
-      <div>
-        <h2></h2>
-      </div>
-    </>
-  );
-};
+
 export default Portfolio;
 // shadow-[0px_20px_20px_10px_#00000024]
