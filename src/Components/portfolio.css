@@ -5,6 +5,7 @@
 .skill-main {
     height: auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -27,4 +28,18 @@
     width: 13%;
     margin: 1%;
     padding: 0.5%;
+}
+
+@media (min-width: 350px) and (max-width:900px) {
+    .skill {
+        width: 45%;
+        height: 10%;
+        margin: 1%;
+    }
+    .skill img {
+        background-position: center;
+        background-size: cover;
+        height: 13vh;
+        width: 90%;
+    }
 }

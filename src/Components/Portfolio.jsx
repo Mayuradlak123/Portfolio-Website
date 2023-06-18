@@ -25,23 +25,23 @@ import AWS from "./Logos/AWS.png";
 import NewsImage from "./Logos/News-App.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import {
-  FaFacebook,
-  FaTwitter,
-
-  FaLinkedin,
-  FaGithub,
-} from "react-icons/fa";
+import Website from "./Logos/Website.jpg"
+import CRUD from "./Logos/CRUD.webp"
+import Stock from "./Logos/Stock.jpg"
+import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 function Portfolio() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-  // const [isHovered, setIsHovered] = useState(false);
-
 
   const experiences = [
     {
@@ -80,7 +80,7 @@ function Portfolio() {
     link.click();
   };
   const sendMessage = async (e) => {
-    const toastOption={
+    const toastOption = {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -89,7 +89,7 @@ function Portfolio() {
       draggable: true,
       progress: undefined,
       theme: "light",
-      }
+    };
     e.preventDefault();
 
     const formData = {
@@ -106,10 +106,10 @@ function Portfolio() {
     })
       .then((res) => {
         console.log(formData);
-        setEmail("")
-        setName("")
-        setMessage("")
-        toast.success(toastOption,"Message Sent Successfully");
+        setEmail("");
+        setName("");
+        setMessage("");
+        toast.success(toastOption, "Message Sent Successfully");
       })
       .catch((err) => {
         toast.error("Failed to Send Message ");
@@ -118,115 +118,174 @@ function Portfolio() {
   return (
     <>
       <ToastContainer
-position="top-center"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-/>
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div className="bg-slate-900 scroll-smooth">
-        <nav className="bg-slate-900 sticky top-0 z-10">
-          <div className="container mx-auto px-4 py-4">
-            <div className="flex justify-between items-center">
-              <div className="text-white font-bold text-lg">Mayur Adlak</div>
-              <div className="md:hidden">
-                <button
-                  className="text-white focus:outline-none"
-                  onClick={toggleMobileMenu}
-                >
-                  <svg
-                    className="h-6 w-6"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    {isMobileMenuOpen ? (
-                      <path d="M6 18L18 6M6 6l12 12"></path>
-                    ) : (
-                      <path d="M3 12h18M3 6h18M3 18h18"></path>
-                    )}
-                  </svg>
-                </button>
-              </div>
-              <div
-                className={`${
-                  isMobileMenuOpen ? "block" : "hidden"
-                } md:block md:flex`}
-              >
-                <ul className="flex space-x-4">
-                  <li>
-                    <a href="/" className="text-white hover:text-gray-300">
+        <nav className="bg-gray-800 sticky top-0">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+            <div className="flex items-center justify-between h-16">
+              <div className="flex items-center justify-between">
+                <div className="flex-shrink-0">
+                  <a href="/" className="text-white font-bold text-lg">
+                    Mayur Adlak
+                  </a>
+                </div>
+                <div className="hidden md:block">
+                  <div className="ml-10 flex justify-end items-baseline space-x-4">
+                    <a
+                      href="/"
+                      className="text-gray-300 hover:text-white px-3 py-2  rounded-md text-sm font-medium"
+                    >
                       Home
                     </a>
-                  </li>
-                  <li>
                     <a
-                      href="#about-me"
-                      className="text-white hover:text-gray-300"
+                      href="#about"
+                      className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
                       About
                     </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#coding"
-                      className="text-white hover:text-gray-300"
-                    >
-                      Coding
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#skills"
-                      className="text-white hover:text-gray-300"
-                    >
-                      Skills
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#project"
-                      className="text-white hover:text-gray-300"
-                    >
-                      Projects
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="text-white hover:text-gray-300"
-                      href="#experience"
-                    >
-                      Experience
-                    </a>
-                  </li>
-                  <li>
                     <a
                       href="#contact"
-                      className="text-white hover:text-gray-300"
+                      className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Contact
                     </a>
-                  </li>
-                </ul>
+                    <a
+                      href="#coding"
+                      className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Coding
+                    </a>
+                    <a
+                      href="#projects"
+                      className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Projects
+                    </a>
+                    <a
+                      href="#experience"
+                      className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Experience
+                    </a>
+                    <a
+                      href="#contact"
+                      className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="-mr-2 flex md:hidden">
+                <button
+                  onClick={toggleMenu}
+                  type="button"
+                  className="text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white inline-flex items-center justify-center p-2 rounded-md"
+                >
+                  <span className="sr-only">Open main menu</span>
+                  {!isMenuOpen ? (
+                    <svg
+                      className="block h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      className="block h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  )}
+                </button>
               </div>
             </div>
           </div>
+          {isMenuOpen && (
+            <div className="md:hidden flex justify-center">
+             
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 ">
+                <a
+                  href="/"
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Home
+                </a>
+                <a
+                  href="#about"
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  About
+                </a>
+                <a
+                  href="#contact"
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Contact
+                </a>
+                <a
+                  href="#coding"
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Coding
+                </a>
+                <a
+                  href="#project"
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Projects
+                </a>
+                <a
+                  href="#experience"
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Experience
+                </a>
+                <a
+                  href="#contact"
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Contact
+                </a>
+              </div>
+            </div>
+          )}
+        
         </nav>
         <div className=" text-white flex w-full ">
-          <div className="h-full bg-red-300 p-[3%] w-full flex items-center  bg-slate-900">
-            <div className=" px-8 w-full">
-              <h1 className="text-6xl font-bold mb-4 w-full text-center">
+          <div className="h-full bg-red-300 p-4 md:p-8 md:w-full flex items-center bg-slate-900">
+            <div className="px-1 md:px-8 w-full">
+              <h1 className="text-2xl sm:text-2xl md:text-6xl font-bold mb-4 text-center">
                 Mayur Adlak I'm Software Developer
               </h1>
-              <p className="text-xl text-center w-full">
+              <p className="text-lg lg:text-xl text-center text-justify px-2 sm:w-full">
                 As a skilled software developer, I bring expertise in designing,
                 developing, and implementing software solutions that meet
                 clients' needs. With a strong foundation in programming
@@ -235,33 +294,26 @@ theme="light"
                 problem-solving and attention to detail drive me to consistently
                 deliver high-quality software products.
               </p>
-              <button
-                className="bg-blue-500 mt-6 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                onClick={handleDownload}
-              >
+              <button className="bg-blue-500 mt-6 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 <a href={resumePath} download>
-                  
                   Download Resume
                 </a>
               </button>
             </div>
           </div>
         </div>
-        <h2 className="text-3xl text-white bg-slate-900 border-green border-solid ">
-          About me
-        </h2>
 
-        <div className="flex w-full h-60 p-2 bg-slate-900 transition-all">
-          <div className="flex flex-col justify-center mx-2 mt-6 my-2 item-center w-1/2 text-white">
-            <h1 className="text-white text-4xl  py-2 ">About Me</h1>
-            <h2 className=" py-2 text-3xl font-bold">
+        <div className="flex flex-col lg:flex-row w-full h-auto lg:h-60 p-2 bg-slate-900 transition-all">
+          <div className="flex flex-col justify-center mx-2 mt-6 my-2 w-full lg:w-1/2 text-white">
+            <h1 className="text-2xl lg:text-3xl py-2 text-center">About Me</h1>
+            <h2 className="py-2 text-2xl lg:text-3xl font-thin md:font-bold text-center">
               Hi. I'm Mayur Adlak, nice to meet you. <br /> Please take a look
               around.
             </h2>
           </div>
-          <div className=" w-1/2 flex flex-col text-white justify-center item-center">
-            <p className="text-xl text-center text-justify px-2">
-              Passionate problem solver and innovative software developer I
+          <div className="w-full lg:w-1/2 flex flex-col text-white justify-center">
+            <p className="text-lg lg:text-xl text-center text-justify px-2">
+              Passionate problem solver and innovative software developer. I
               thrive in collaborative environments, leveraging my skills to
               design and develop cutting-edge software applications.
               Continuously staying updated with the latest industry trends and
@@ -279,7 +331,7 @@ theme="light"
           Codind Profile
         </h2>
 
-        <div className=" h-auto w-full p-4 bg-slate-900 flex flex-col justify-center  ">
+        <div className=" h-auto p-4 bg-slate-900 flex flex-col justify-center  ">
           <div className="flex text-white justify-center flex-col w-full item-center text-xl font-semibold px-2 py-2">
             <p className="">
               Welcome to my coding profile! Throughout my coding journey, I have
@@ -287,8 +339,8 @@ theme="light"
               solutions to enhance user experiences and meet project objectives.
             </p>
           </div>
-          <div className="flex h-auto py-4  w-full justify-center item-center mt-2 ">
-            <div className="flex  justify-center ">
+          <div className="">
+            <div className="flex w-full justify-center sm:flex-wrap sm:w-full flex-wrap flex  md:flex h-auto py-4 justify-center item-center mt-2  ">
               <Cards
                 Images={Hackerrenk}
                 URL={"https://www.hackerrank.com/mayuradlak030"}
@@ -316,7 +368,7 @@ theme="light"
           <h2 className="text-3xl text-white border-green border-solid ">
             Skills
           </h2>
-          <div className="skill-main mt-3">
+          <div className="skill-main mt-3 h-auto w-full flex flex-wrap justify-center items-center skill-main mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {/* <h1>Skills</h1> */}
             <Skills Images={CPP} Title="C++ Programming" />
             <Skills Images={DSA} Title="Data Structure" />
@@ -340,13 +392,13 @@ theme="light"
           </div>
         </div>
         <h2
-          className="text-3xl text-white border-green border-solid mt-8"
+          className="text-3xl text-white border-green border-solid md:mt-8 sm:mt-4"
           id="project"
         >
           Acadmic Projects
         </h2>
-        <div className="project w-full flex justify-center item-center h-auto mt-8">
-          <div className="w-1/5  shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea] m-2">
+        <div className="project w-full h-auto flex-wrap flex justify-center item-center h-auto mt-8">
+          <div className=" w-11/12  sm:w-1/2 md:w-1/4 p-2  shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea] m-2">
             <img className="" src={NewsImage} alt="Project" />
             <div className="p-2 w-full ">
               <h3 className="text-xl text-white font-medium">
@@ -354,57 +406,60 @@ theme="light"
               </h3>
 
               <a
-                href="https://www.google.com"
-                target="_blank" rel="noreferrer"
+                href="https://github.com/Mayuradlak123/News-Web-Application"
+                target="_blank"
+                rel="noreferrer"
                 className="text-blue-500 hover:underline"
               >
                 View Project
               </a>
             </div>
           </div>
-          <div className="w-1/5 m-2 shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea]">
-            <img className="" src={NewsImage} alt="Project" />
+          <div className="w-11/12  sm:w-1/2 md:w-1/4 p-2 m-2 shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea]">
+            <img className="" src={Website} alt="Project" />
             <div className="p-2 w-full ">
               <h3 className="text-xl text-white font-medium">
-                News Web Application
+                University Website
               </h3>
 
               <a
-                href="https://www.google.com"
-                target="_blank" rel="noreferrer"
+                href="https://github.com/Mayuradlak123/Online-Abroad-University-website-"
+                target="_blank"
+                rel="noreferrer"
                 className="text-blue-500 hover:underline"
               >
                 View Project
               </a>
             </div>
           </div>
-          <div className="w-1/5  m-2 shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea]">
-            <img className="" src={NewsImage} alt="Project" />
+          <div className="w-11/12  sm:w-1/2 md:w-1/4 p-2  m-2 shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea]">
+            <img className="" src={Stock} alt="Project" />
             <div className="p-2 w-full ">
               <h3 className="text-xl text-white font-medium">
-                News Web Application
+                Stock Price Prediction Web Application
               </h3>
 
               <a
-                href="https://www.google.com"
-                target="_blank" rel="noreferrer"
+                href="https://github.com/Mayuradlak123/Stock-Share-Price-Predictor-ML-Modle.git"
+                target="_blank"
+                rel="noreferrer"
                 className="text-blue-500 hover:underline"
               >
                 View Project
               </a>
             </div>
           </div>
-          <div className="w-1/5 m-2 shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea]">
-            <img className="" src={NewsImage} alt="Project" />
+          <div className="w-11/12  sm:w-1/2 md:w-1/4 p-2 m-2 shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea]">
+            <img className="" src={CRUD} alt="Project" />
             <div className="p-2 w-full ">
               <h3 className="text-xl text-white font-medium">
-                News Web Application
+              CRUD Operation using MERN
               </h3>
 
               <a
-                href="https://www.google.com"
-                target="_blank" rel="noreferrer"
-                
+                href="https://github.com/Mayuradlak123/CRUD-Operation-Using-MERN/tree/master"
+                target="_blank"
+                rel="noreferrer"
                 className="text-blue-500 hover:underline"
               >
                 View Project
@@ -446,7 +501,7 @@ theme="light"
           <form
             className="max-w-md mx-auto mt-4"
             action="https://getform.io/f/31798245-609f-4194-9a22-c45f02c90b82"
-            method="POST" 
+            method="POST"
           >
             <div className="mb-4">
               <label
@@ -500,7 +555,7 @@ theme="light"
               <button
                 type="submit"
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              onClick={sendMessage}
+                onClick={sendMessage}
               >
                 Submit
               </button>
@@ -512,7 +567,6 @@ theme="light"
             <div className="mb-4 md:mb-0">
               <h3 className="text-xl font-bold">Contact</h3>
               <p className="mt-2 text-xl">
-                
                 Phone:
                 <a href="tel:9098002830" target="_blank" rel="noreferrer">
                   +91 9098002830
@@ -522,9 +576,9 @@ theme="light"
                 Email:
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=mayuradlak030@gmail.com"
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  
                   mayuradlak030@gmail.com
                 </a>
               </p>
@@ -532,20 +586,32 @@ theme="light"
             <div className="flex justify-center flex-col items-center ">
               <div className="text-2xl">Contact on Social Media</div>
               <div className="flex ">
-                <a href="https://www.facebook.com/mayur.adlak.10/" target="_blank" rel="noreferrer">
-                  
+                <a
+                  href="https://www.facebook.com/mayur.adlak.10/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaFacebook color=" #3b5998" className="text-4xl m-4" />
                 </a>
-                <a href="https://www.linkedin.com/in/mayur-adlak-31b962220/" target="_blank" rel="noreferrer">
-                  
+                <a
+                  href="https://www.linkedin.com/in/mayur-adlak-31b962220/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaLinkedin color="#0A66C2" className="text-4xl m-4" />
                 </a>
-                <a href="https://github.com/Mayuradlak123" target="_blank" rel="noreferrer">
-                  
+                <a
+                  href="https://github.com/Mayuradlak123"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaGithub color="#171515" className="text-4xl m-4" />
                 </a>
-                <a href="https://twitter.com/MayurAdlak" target="_blank" rel="noreferrer">
-                  
+                <a
+                  href="https://twitter.com/MayurAdlak"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaTwitter color="#00acee" className="text-4xl m-4" />
                 </a>
               </div>
@@ -579,8 +645,8 @@ const Cards = ({ Images, URL }) => {
 const Skills = ({ Title, Images }) => {
   return (
     <>
-      <div className="skill">
-        <img className="rounded-2xl" src={Images} alt="BigCo Inc. logo" />
+      <div className="skill  ">
+        <img className="rounded-2xl" src={Images} alt="picture" />
         <h3 className="">{Title}</h3>
       </div>
     </>
