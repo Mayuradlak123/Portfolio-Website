@@ -1,4 +1,5 @@
 import "./App.css";
+import HomePage from "./Components/Landing-Page/HomePage";
 import Portfolio from "./Components/Portfolio"
 
 import { ToastContainer, toast } from "react-toastify";
@@ -18,6 +19,7 @@ function App() {
         pauseOnHover
         theme="light"
       />
+      {/* <HomePage/> */}
 <Portfolio/>
     </div>
   );
