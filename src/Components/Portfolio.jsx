@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Hackerrenk from "./SVG/Hackerrenk.png";
+import Resume from "./files/Mayur-Resume.pdf"
 import GFG from "./SVG/gfg.jpeg";
 import LinkedIn from "./SVG/link.png";
 import LeetCode from "./SVG/leet.png";
@@ -69,13 +70,13 @@ function Portfolio() {
       description: ` I leveraged Node.js to build scalable APIs and utilized SQL databases for efficient data storage and retrieval. With a focus on API development, I extensively used Postman for testing and debugging to ensure optimal functionality and error handling.ebugged and resolved issues to improve  API performance and reliability .`,
     },
   ];
-  const resumePath = "./files/NewResume01.pdf";
+  // const resumePath = "C:\Us\files\Mayur-Resume.pdf";
   const handleDownload = () => {
     // Replace 'resume.pdf' with the actual file name and path of your resume
 
     const link = document.createElement("a");
-    link.href = resumePath;
-    link.download = "NewResume01.pdf"; // Set the desired file name for download
+    link.href = Resume;
+    link.download = "Mayur-Resume"; // Set the desired file name for download
     link.target = "_blank";
     link.click();
   };
@@ -129,7 +130,7 @@ function Portfolio() {
         pauseOnHover
         theme="light"
       />
-      <div className="bg-slate-900 scroll-smooth">
+      <div className="bg-slate-50 scroll-smooth bg-slate-50">
         <nav className="bg-gray-800 sticky top-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
             <div className="flex items-center w-full justify-between  h-16">
@@ -143,43 +144,43 @@ function Portfolio() {
                   <div className="ml-10  flex justify-end items-baseline space-x-4">
                     <a
                       href="/"
-                      className="text-gray-300 text-xl hover:text-white px-3 py-2   rounded-md  font-medium"
+                      className="text-gray-300 text-md hover:text-white px-3 py-2   rounded-md  font-medium"
                     >
                       Home
                     </a>
                     <a
                       href="#about"
-                      className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-xl "
+                      className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-md "
                     >
                       About
                     </a>
                     <a
                       href="#contact"
-                      className="text-gray-300 text-xl hover:text-white px-3 py-2 rounded-md  font-medium"
+                      className="text-gray-300 text-md hover:text-white px-3 py-2 rounded-md  font-medium"
                     >
                       Contact
                     </a>
                     <a
                       href="#coding"
-                      className="text-gray-300 text-xl hover:text-white px-3 py-2 rounded-md  font-medium"
+                      className="text-gray-300 text-md hover:text-white px-3 py-2 rounded-md  font-medium"
                     >
                       Coding
                     </a>
                     <a
                       href="#projects"
-                      className="text-gray-300 text-xl hover:text-white px-3 py-2 rounded-md  font-medium"
+                      className="text-gray-300 text-md hover:text-white px-3 py-2 rounded-md  font-medium"
                     >
                       Projects
                     </a>
                     <a
                       href="#experience"
-                      className="text-gray-300 text-xl hover:text-white px-3 py-2 rounded-md  font-medium"
+                      className="text-gray-300 text-md hover:text-white px-3 py-2 rounded-md  font-medium"
                     >
                       Experience
                     </a>
                     <a
                       href="#contact"
-                      className="text-gray-300 text-xl hover:text-white px-3 py-2 rounded-md  font-medium"
+                      className="text-gray-300 text-md hover:text-white px-3 py-2 rounded-md  font-medium"
                     >
                       Contact
                     </a>
@@ -264,13 +265,13 @@ function Portfolio() {
                 </a>
                 <a
                   href="#experience"
-                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-300 text-lg hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Experience
                 </a>
                 <a
                   href="#contact"
-                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-300  hover:text-white block px-3 py-2 rounded-md text-base font-small"
                 >
                   Contact
                 </a>
@@ -279,8 +280,8 @@ function Portfolio() {
           )}
         
         </nav>
-        <div className=" text-white flex w-full ">
-          <div className="h-full bg-red-300 p-4 md:p-8 md:w-full flex items-center bg-slate-900">
+        <div className=" text-black flex w-full ">
+          <div className="h-full  p-4 md:p-8 md:w-full flex items-center bg-slate-50">
             <div className="px-1 md:px-8 w-full">
               <h1 className="text-2xl sm:text-2xl md:text-6xl font-bold mb-4 text-center">
                 Mayur Adlak I'm Software Developer
@@ -294,24 +295,26 @@ function Portfolio() {
                 problem-solving and attention to detail drive me to consistently
                 deliver high-quality software products.
               </p>
-              <button className="bg-blue-500 mt-6 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                <a href={resumePath} download>
+              <div className=" text-center">
+              <button className="bg-blue-500  mt-6 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <a href={Resume} download>
                   Download Resume
                 </a>
               </button>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row w-full h-auto lg:h-60 p-2 bg-slate-900 transition-all">
-          <div className="flex flex-col justify-center mx-2 mt-6 my-2 w-full lg:w-1/2 text-white">
+        <div className="flex flex-col lg:flex-row w-full h-auto lg:h-60 p-2 bg-slate-50 transition-all">
+          <div className="flex flex-col justify-center mx-2 mt-6 my-2 w-full lg:w-1/2 text-black">
             <h1 className="text-2xl lg:text-3xl py-2 text-center">About Me</h1>
             <h2 className="py-2 text-2xl lg:text-3xl font-thin md:font-bold text-center">
               Hi. I'm Mayur Adlak, nice to meet you. <br /> Please take a look
               around.
             </h2>
           </div>
-          <div className="w-full lg:w-1/2 flex flex-col text-white justify-center">
+          <div className="w-full lg:w-1/2 flex flex-col text-black justify-center">
             <p className="text-lg lg:text-xl text-center text-justify px-2">
               Passionate problem solver and innovative software developer. I
               thrive in collaborative environments, leveraging my skills to
@@ -326,13 +329,13 @@ function Portfolio() {
 
         <h2
           id="coding"
-          className="text-3xl mt-6 text-white border-green border-solid "
+          className="text-3xl mt-6 text-black border-green border-solid  text-center"
         >
           Codind Profile
         </h2>
 
-        <div className=" h-auto p-4 bg-slate-900 flex flex-col justify-center  ">
-          <div className="flex text-white justify-center flex-col w-full item-center text-xl font-semibold px-2 py-2">
+        <div className=" h-auto p-4 bg-slate-50 flex flex-col justify-center  ">
+          <div className=" text-center flex text-black justify-center flex-col w-full item-center text-xl font-semibold px-2 py-2">
             <p className="">
               Welcome to my coding profile! Throughout my coding journey, I have
               successfully tackled complex challenges, <br /> finding innovative
@@ -364,8 +367,8 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="bg-slate-900 mt-8" id="skills">
-          <h2 className="text-3xl text-white border-green border-solid ">
+        <div className="bg-slate-50 mt-8" id="skills">
+          <h2 className="text-3xl text-black border-green border-solid  text-center">
             Skills
           </h2>
           <div className="skill-main mt-3 h-auto w-full flex flex-wrap justify-center items-center skill-main mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -392,7 +395,7 @@ function Portfolio() {
           </div>
         </div>
         <h2
-          className="text-3xl text-white border-green border-solid md:mt-8 sm:mt-4"
+          className="text-3xl text-black border-green border-solid md:mt-8 sm:mt-4  text-center"
           id="project"
         >
           Acadmic Projects
@@ -400,8 +403,8 @@ function Portfolio() {
         <div className="project w-full h-auto flex-wrap flex justify-center item-center h-auto mt-8">
           <div className=" w-11/12  sm:w-1/2 md:w-1/4 p-2  shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea] m-2">
             <img className="" src={NewsImage} alt="Project" />
-            <div className="p-2 w-full ">
-              <h3 className="text-xl text-white font-medium">
+            <div className="p-2 w-full text-center">
+              <h3 className="text-xl text-black text-center font-medium">
                 News Web Application
               </h3>
 
@@ -409,7 +412,7 @@ function Portfolio() {
                 href="https://github.com/Mayuradlak123/News-Web-Application"
                 target="_blank"
                 rel="noreferrer"
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 hover:underline text-center"
               >
                 View Project
               </a>
@@ -417,16 +420,16 @@ function Portfolio() {
           </div>
           <div className="w-11/12  sm:w-1/2 md:w-1/4 p-2 m-2 shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea]">
             <img className="" src={Website} alt="Project" />
-            <div className="p-2 w-full ">
-              <h3 className="text-xl text-white font-medium">
+            <div className="p-2 w-full text-center">
+              <h3 className="text-xl text-black font-medium text-center" >
                 University Website
               </h3>
 
               <a
-                href="https://github.com/Mayuradlak123/Online-Abroad-University-website-"
+                href="https://university-web-clone.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 text-center hover:underline"
               >
                 View Project
               </a>
@@ -434,8 +437,8 @@ function Portfolio() {
           </div>
           <div className="w-11/12  sm:w-1/2 md:w-1/4 p-2  m-2 shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea]">
             <img className="" src={Stock} alt="Project" />
-            <div className="p-2 w-full ">
-              <h3 className="text-xl text-white font-medium">
+            <div className="p-2 w-full text-center">
+              <h3 className="text-xl text-black text-center font-medium">
                 Stock Price Prediction Web Application
               </h3>
 
@@ -443,7 +446,7 @@ function Portfolio() {
                 href="https://github.com/Mayuradlak123/Stock-Share-Price-Predictor-ML-Modle.git"
                 target="_blank"
                 rel="noreferrer"
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 text-center hover:underline"
               >
                 View Project
               </a>
@@ -451,8 +454,8 @@ function Portfolio() {
           </div>
           <div className="w-11/12  sm:w-1/2 md:w-1/4 p-2 m-2 shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea]">
             <img className="" src={CRUD} alt="Project" />
-            <div className="p-2 w-full ">
-              <h3 className="text-xl text-white font-medium">
+            <div className="p-2 w-full text-center">
+              <h3 className="text-xl text-black font-medium text-center">
               CRUD Operation using MERN
               </h3>
 
@@ -460,7 +463,7 @@ function Portfolio() {
                 href="https://github.com/Mayuradlak123/CRUD-Operation-Using-MERN/tree/master"
                 target="_blank"
                 rel="noreferrer"
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 text-center hover:underline"
               >
                 View Project
               </a>
@@ -472,21 +475,21 @@ function Portfolio() {
           className="container mx-auto px-4 py-8 w-full mt-8"
           id="experience"
         >
-          <h2 className="text-3xl text-white font-bold mb-4">Experience</h2>
+          <h2 className="text-3xl text-black font-bold mb-4  text-center">Experience</h2>
           <div className="flex flex-col md:flex-row">
             {experiences.map((experience, index) => (
               <div key={index} className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
                 <div className="bg-white rounded-lg shadow p-2 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] shadow-lg">
-                  <h3 className="text-[18px] font-bold ">
+                  <h3 className="text-[18px] font-bold  text-center">
                     {experience.company}
                   </h3>
-                  <p className="text-center font-bold text-[16px] ">
+                  <p className="text-center font-bold text-[16px]  text-center ">
                     {experience.role}
                   </p>
-                  <p className="text-justify  font-normal text-[16px] ">
+                  <p className="text-justify  font-normal text-[16px]  text-center">
                     {experience.duration}
                   </p>
-                  <p className="text-justify text-[17px]">
+                  <p className="text-justify text-[17px]  text-center">
                     {experience.description}
                   </p>
                 </div>
@@ -495,9 +498,10 @@ function Portfolio() {
           </div>
         </section>
         <div className="mt-8" id="contact">
-          <h2 className="text-3xl text-white border-green border-solid ">
-            Contact me
-          </h2>
+        <h2 className="text-3xl text-black border-green border-solid mx-auto text-center">
+  Contact me
+</h2>
+
           <form
             className="max-w-md mx-auto mt-4"
             action="https://getform.io/f/31798245-609f-4194-9a22-c45f02c90b82"
@@ -562,17 +566,17 @@ function Portfolio() {
             </div>
           </form>
         </div>
-        <footer className="bg-gray-800 text-white py-4 mt-8 pb-8">
+        <footer className=" shadow-[0px_20px_20px_10px_#f7fafc] text-black py-4 mt-8 pb-8">
           <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
             <div className="mb-4 md:mb-0">
-              <h3 className="text-xl font-bold">Contact</h3>
-              <p className="mt-2 text-xl">
+              <h3 className="text-xl font-bold text-center">Contact</h3>
+              <p className="mt-2 text-md">
                 Phone:
                 <a href="tel:9098002830" target="_blank" rel="noreferrer">
                   +91 9098002830
                 </a>
               </p>
-              <p className="text-xl">
+              <p className="text-md">
                 Email:
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=mayuradlak030@gmail.com"
@@ -617,9 +621,9 @@ function Portfolio() {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold">Address</h3>
-              <p className="mt-2 text-xl">Kushwah Nagar </p>
-              <p className="text-xl">Indore M.P. (452015)</p>
+              <h3 className="text-md text-center font-bold">Address</h3>
+              <p className="mt-2 text-md">Kushwah Nagar </p>
+              <p className="text-md">Indore M.P. (452015)</p>
             </div>
           </div>
         </footer>

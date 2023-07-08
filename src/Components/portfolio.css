@@ -10,7 +10,7 @@
     justify-content: center;
     width: 100%;
     flex-wrap: wrap;
-    background-color: #0f172a;
+    /* background-color: #0f172a; */
     font-size: 18px;
 }
 
@@ -28,6 +28,7 @@
     width: 13%;
     margin: 1%;
     padding: 0.5%;
+    text-align: center;
 }
 
 @media (min-width: 350px) and (max-width:900px) {
