@@ -28,7 +28,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Website from "./Logos/Website.jpg"
 import CRUD from "./Logos/CRUD.webp"
-import Stock from "./Logos/Stock.jpg"
+import OTT from "./Logos/OTT.png"
 import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 function Portfolio() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -155,10 +155,10 @@ function Portfolio() {
                       About
                     </a>
                     <a
-                      href="#contact"
+                      href="#skills"
                       className="text-gray-300 text-md hover:text-white px-3 py-2 rounded-md  font-medium"
                     >
-                      Contact
+                      Skills
                     </a>
                     <a
                       href="#coding"
@@ -246,10 +246,10 @@ function Portfolio() {
                   About
                 </a>
                 <a
-                  href="#contact"
+                  href="#skills"
                   className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Contact
+                  Skills
                 </a>
                 <a
                   href="#coding"
@@ -371,7 +371,7 @@ function Portfolio() {
           <h2 className="text-3xl text-black border-green border-solid  text-center">
             Skills
           </h2>
-          <div className="skill-main mt-3 h-auto w-full flex flex-wrap justify-center items-center skill-main mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <div className="shadow shadow-[0px_20px_20px_10px_#00000024] skill-main mt-3 h-auto w-full flex flex-wrap justify-center items-center skill-main mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {/* <h1>Skills</h1> */}
             <Skills Images={CPP} Title="C++ Programming" />
             <Skills Images={DSA} Title="Data Structure" />
@@ -400,7 +400,7 @@ function Portfolio() {
         >
           Acadmic Projects
         </h2>
-        <div className="project w-full h-auto flex-wrap flex justify-center item-center h-auto mt-8">
+        <div className="project w-full h-auto flex-wrap flex justify-center item-center h-auto mt-8" id="projects">
           <div className=" w-11/12  sm:w-1/2 md:w-1/4 p-2  shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea] m-2">
             <img className="" src={NewsImage} alt="Project" />
             <div className="p-2 w-full text-center">
@@ -436,14 +436,14 @@ function Portfolio() {
             </div>
           </div>
           <div className="w-11/12  sm:w-1/2 md:w-1/4 p-2  m-2 shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea]">
-            <img className="" src={Stock} alt="Project" />
+            <img className="" src={OTT} alt="Project" height="200px"/>
             <div className="p-2 w-full text-center">
               <h3 className="text-xl text-black text-center font-medium">
-                Stock Price Prediction Web Application
+               OTT Platrform Clone
               </h3>
 
               <a
-                href="https://github.com/Mayuradlak123/Stock-Share-Price-Predictor-ML-Modle.git"
+                href="https://watchzone-project.netlify.app"
                 target="_blank"
                 rel="noreferrer"
                 className="text-blue-500 text-center hover:underline"
@@ -476,10 +476,10 @@ function Portfolio() {
           id="experience"
         >
           <h2 className="text-3xl text-black font-bold mb-4  text-center">Experience</h2>
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row ">
             {experiences.map((experience, index) => (
               <div key={index} className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <div className="bg-white rounded-lg shadow p-2 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] shadow-lg">
+                <div className="bg-white rounded-lg shadow p-2 shadow  shadow-[0px_20px_20px_10px_#00000024] shadow-lg">
                   <h3 className="text-[18px] font-bold  text-center">
                     {experience.company}
                   </h3>
@@ -566,7 +566,7 @@ function Portfolio() {
             </div>
           </form>
         </div>
-        <footer className=" shadow-[0px_20px_20px_10px_#f7fafc] text-black py-4 mt-8 pb-8">
+        <footer className=" shadow-[0px_20px_20px_10px_#f7fafc] bg-slate-300 text-black py-4 mt-8 pb-8">
           <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
             <div className="mb-4 md:mb-0">
               <h3 className="text-xl font-bold text-center">Contact</h3>
