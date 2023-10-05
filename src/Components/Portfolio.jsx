@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Hackerrenk from "./SVG/Hackerrenk.png";
-import Resume from "./files/Mayur-Resume.pdf"
+import Resume from "./files/MayurResume.pdf"
 import GFG from "./SVG/gfg.jpeg";
 import LinkedIn from "./SVG/link.png";
 import LeetCode from "./SVG/leet.png";
@@ -26,7 +26,7 @@ import AWS from "./Logos/AWS.png";
 import NewsImage from "./Logos/News-App.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Website from "./Logos/Website.jpg"
+import Website from "./Logos/Code-editor.avif"
 import CRUD from "./Logos/CRUD.webp"
 import OTT from "./Logos/OTT.png"
 import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
@@ -45,35 +45,29 @@ function Portfolio() {
   };
 
   const experiences = [
+  
     {
-      company: "RedGates IT Solution",
-      role: "Full Stack Developer Intern",
-      duration: "4 Months (March 22-June 22)",
-      description: `During my internship, I honed my skills in full stack development, leveraging HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB to create efficient and scalable web applications. I gained hands-on experience in both front-end and back-end development, and gained a deeper understanding of the software development lifecycle.`,
-    },
-    {
-      company: "ZEDGE Technology Pvt. Ltd.",
-      role: "Software Engineer Intern",
-      duration: "6 Months (June 22 - Dec 22)",
-      description: `Developed and deployed full-stack web applications using Python, React, SQL, and AWS. Leveraged AWS services, such as EC2 and S3, to deploy and manage applications in a cloud environment.Through collaboration with a diverse team, I learned agile development methodologies, code review practices.`,
+      company: "38 Labs Private Limited",
+      role: "Software Developer Intern",
+      duration: "10 Months (March 22 - Dec 22)",
+      description: `Developed and deployed full-stack web applications using Python Django, React js, Node js, SQL, and AWS. Leveraged AWS services, such as EC2 and S3, to deploy and manage applications in a cloud.Through collaboration with a diverse team, I learned agile development methodologies, code review practices. Created CI & CD Pipelines for automate the process of testing and deployment using Jenkins.`,
     },
     {
       company: "WebSeeder Technology",
-      role: " Software Developer Intern",
-      duration: "6 Months (Jan 22 - June 22)",
-      description: ` I gained valuable experience in full-stack web development with a focus on the MERN stack and AWS cloud services. By utilizing MongoDB, Express.js, React, and Node.js, I built dynamic applications  with server-side logic.Utilized Git for version control and collaborated with the team on branching and merging strategies.`,
+      role: " Full Stack Developer Intern",
+      duration: "6 Months (Jan 23 - June 23)",
+      description: ` I gained valuable experience in full-stack web development with a focus on the MERN stack and AWS cloud services. By utilizing MongoDB, Express.js, React, and Node.js, I built dynamic applications  with server-side logic.Utilized Git for version control and collaborated with the team on branching and merging strategies. Implemented the Google Authentication and Payment Gateway using Stripe. `,
     },
     {
-      company: "Brighter Bee Technology",
+      company: "Logixi Technology",
       role: "Software Developer Intern",
-      duration: "(June 22-Current)",
-      description: ` I leveraged Node.js to build scalable APIs and utilized SQL databases for efficient data storage and retrieval. With a focus on API development, I extensively used Postman for testing and debugging to ensure optimal functionality and error handling.ebugged and resolved issues to improve  API performance and reliability .`,
+      duration: "(June 23-Present)",
+      description: ` I leveraged Node.js, Express js to build scalable APIs and utilized SQL databases for efficient data storage and retrieval. Created front-end using React.js and Next js.  With a focus on API and Web application development, I extensively used Postman for testing and debugging to ensure optimal functionality and error handling.ebugged and resolved issues to improve  API performance and reliability .`,
     },
   ];
-  // const resumePath = "C:\Us\files\Mayur-Resume.pdf";
-  const handleDownload = () => {
-    // Replace 'resume.pdf' with the actual file name and path of your resume
 
+  const handleDownload = () => {
+   
     const link = document.createElement("a");
     link.href = Resume;
     link.download = "Mayur-Resume"; // Set the desired file name for download
@@ -265,13 +259,13 @@ function Portfolio() {
                 </a>
                 <a
                   href="#experience"
-                  className="text-gray-300 text-lg hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Experience
                 </a>
                 <a
                   href="#contact"
-                  className="text-gray-300  hover:text-white block px-3 py-2 rounded-md text-base font-small"
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Contact
                 </a>
@@ -422,11 +416,11 @@ function Portfolio() {
             <img className="" src={Website} alt="Project" />
             <div className="p-2 w-full text-center">
               <h3 className="text-xl text-black font-medium text-center" >
-                University Website
+                Code Editor
               </h3>
 
               <a
-                href="https://university-web-clone.netlify.app/"
+                href="https://react-compiler.netlify.app"
                 target="_blank"
                 rel="noreferrer"
                 className="text-blue-500 text-center hover:underline"
