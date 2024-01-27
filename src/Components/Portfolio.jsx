@@ -6,6 +6,7 @@ import LinkedIn from "./SVG/link.png";
 import LeetCode from "./SVG/leet.png";
 import GitHub from "./SVG/git.png";
 import CPP from "./Logos/cpp.png";
+import NextJs from "./Logos/Next.jpg"
 import SQL from "./Logos/SQL.png";
 import "./portfolio.css";
 import Spring from "./Logos/Spring.png";
@@ -28,8 +29,18 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Website from "./Logos/Code-editor.avif"
 import CRUD from "./Logos/CRUD.webp"
-import OTT from "./Logos/OTT.png"
-import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import OTT from "./Logos/OTT.png";
+import GraphQL from "./Logos/GraphQL.png"
+import JIRA from "./Logos/JIRA.avif"
+import Scrum from "./Logos/Scrum.png"
+import Footer from "./pages/Footer";
+import PHP from './Logos/PHP.png';
+import Laravel from './Logos/Laravel.png';
+import S_Server from './Logos/S_Server.png';
+import Django from "./Logos/Django.png"
+import R_Native from "./Logos/Nativw.jpeg"
+import { experiences } from "../data";
+import SkillsContainer from "./pages/Skills";
 function Portfolio() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [name, setName] = useState();
@@ -44,27 +55,7 @@ function Portfolio() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const experiences = [
-  
-    {
-      company: "38 Labs Private Limited",
-      role: "Software Developer Intern",
-      duration: "10 Months (March 22 - Dec 22)",
-      description: `Developed and deployed full-stack web applications using Python Django, React js, Node js, SQL, and AWS. Leveraged AWS services, such as EC2 and S3, to deploy and manage applications in a cloud.Through collaboration with a diverse team, I learned agile development methodologies, code review practices. Created CI & CD Pipelines for automate the process of testing and deployment using Jenkins.`,
-    },
-    {
-      company: "WebSeeder Technology",
-      role: " Full Stack Developer Intern",
-      duration: "6 Months (Jan 23 - June 23)",
-      description: ` I gained valuable experience in full-stack web development with a focus on the MERN stack and AWS cloud services. By utilizing MongoDB, Express.js, React, and Node.js, I built dynamic applications  with server-side logic.Utilized Git for version control and collaborated with the team on branching and merging strategies. Implemented the Google Authentication and Payment Gateway using Stripe. `,
-    },
-    {
-      company: "Logixi Technology",
-      role: "Software Developer Intern",
-      duration: "(June 23-Present)",
-      description: ` I leveraged Node.js, Express js to build scalable APIs and utilized SQL databases for efficient data storage and retrieval. Created front-end using React.js and Next js.  With a focus on API and Web application development, I extensively used Postman for testing and debugging to ensure optimal functionality and error handling.ebugged and resolved issues to improve  API performance and reliability .`,
-    },
-  ];
+ 
 
   const handleDownload = () => {
    
@@ -110,6 +101,7 @@ function Portfolio() {
         toast.error("Failed to Send Message ");
       });
   };
+  
   return (
     <>
       <ToastContainer
@@ -124,7 +116,7 @@ function Portfolio() {
         pauseOnHover
         theme="light"
       />
-      <div className="bg-slate-50 scroll-smooth bg-slate-50">
+      <div className="scroll-smooth bg-slate-50">
         <nav className="bg-gray-800 sticky top-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
             <div className="flex items-center w-full justify-between  h-16">
@@ -325,7 +317,7 @@ function Portfolio() {
           id="coding"
           className="text-3xl mt-6 text-black border-green border-solid  text-center"
         >
-          Codind Profile
+          Coding Profile
         </h2>
 
         <div className=" h-auto p-4 bg-slate-50 flex flex-col justify-center  ">
@@ -361,33 +353,7 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="bg-slate-50 mt-8" id="skills">
-          <h2 className="text-3xl text-black border-green border-solid  text-center">
-            Skills
-          </h2>
-          <div className="shadow shadow-[0px_20px_20px_10px_#00000024] skill-main mt-3 h-auto w-full flex flex-wrap justify-center items-center skill-main mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {/* <h1>Skills</h1> */}
-            <Skills Images={CPP} Title="C++ Programming" />
-            <Skills Images={DSA} Title="Data Structure" />
-            <Skills Images={Java} Title="Java Programming" />
-            <Skills Images={Python} Title="Python " />
-            <Skills Images={Git} Title="Git Version Control" />
-
-            <Skills Images={HTML} Title="HTML" />
-            <Skills Images={CSS} Title="CSS" />
-            <Skills Images={Tail} Title="Tailwind CSS" />
-            <Skills Images={Bootstrap} Title="Bootstrap" />
-
-            <Skills Images={JavaScript} Title="JavaScript" />
-            <Skills Images={ReactImage} Title="React" />
-            <Skills Images={Node} Title="Node js" />
-            <Skills Images={Express} Title="Express Js" />
-            <Skills Images={MDB} Title="MongoDB" />
-            <Skills Images={SQL} Title="MySQL" />
-            <Skills Images={AWS} Title="AWS" />
-            <Skills Images={Spring} Title="Spring Boot" />
-          </div>
-        </div>
+       <SkillsContainer/>
         <h2
           className="text-3xl text-black border-green border-solid md:mt-8 sm:mt-4  text-center"
           id="project"
@@ -473,17 +439,17 @@ function Portfolio() {
           <div className="flex flex-col md:flex-row ">
             {experiences.map((experience, index) => (
               <div key={index} className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                <div className="bg-white rounded-lg shadow p-2 shadow  shadow-[0px_20px_20px_10px_#00000024] shadow-lg">
-                  <h3 className="text-[18px] font-bold  text-center">
+                <div className="bg-white rounded-lg  p-2   shadow-[0px_20px_20px_10px_#00000024] shadow-lg">
+                  <h3 className="text-[18px] font-bold py-2 text-center">
                     {experience.company}
                   </h3>
-                  <p className="text-center font-bold text-[16px]  text-center ">
+                  <p className=" font-bold text-[16px] mx-2  text-center ">
                     {experience.role}
                   </p>
-                  <p className="text-justify  font-normal text-[16px]  text-center">
+                  <p className="text-justify mx-2 font-normal text-[16px]  ">
                     {experience.duration}
                   </p>
-                  <p className="text-justify text-[17px]  text-center">
+                  <p className="text-justify text-[17px] py-2  ">
                     {experience.description}
                   </p>
                 </div>
@@ -560,67 +526,7 @@ function Portfolio() {
             </div>
           </form>
         </div>
-        <footer className=" shadow-[0px_20px_20px_10px_#f7fafc] bg-slate-300 text-black py-4 mt-8 pb-8">
-          <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
-            <div className="mb-4 md:mb-0">
-              <h3 className="text-xl font-bold text-center">Contact</h3>
-              <p className="mt-2 text-md">
-                Phone:
-                <a href="tel:9098002830" target="_blank" rel="noreferrer">
-                  +91 9098002830
-                </a>
-              </p>
-              <p className="text-md">
-                Email:
-                <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=mayuradlak030@gmail.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  mayuradlak030@gmail.com
-                </a>
-              </p>
-            </div>
-            <div className="flex justify-center flex-col items-center ">
-              <div className="text-2xl">Contact on Social Media</div>
-              <div className="flex ">
-                <a
-                  href="https://www.facebook.com/mayur.adlak.10/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaFacebook color=" #3b5998" className="text-4xl m-4" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/mayur-adlak-31b962220/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaLinkedin color="#0A66C2" className="text-4xl m-4" />
-                </a>
-                <a
-                  href="https://github.com/Mayuradlak123"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaGithub color="#171515" className="text-4xl m-4" />
-                </a>
-                <a
-                  href="https://twitter.com/MayurAdlak"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaTwitter color="#00acee" className="text-4xl m-4" />
-                </a>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-md text-center font-bold">Address</h3>
-              <p className="mt-2 text-md">Kushwah Nagar </p>
-              <p className="text-md">Indore M.P. (452015)</p>
-            </div>
-          </div>
-        </footer>
+       <Footer/>
       </div>
     </>
   );
@@ -640,16 +546,7 @@ const Cards = ({ Images, URL }) => {
     </>
   );
 };
-const Skills = ({ Title, Images }) => {
-  return (
-    <>
-      <div className="skill  ">
-        <img className="rounded-2xl" src={Images} alt="picture" />
-        <h3 className="">{Title}</h3>
-      </div>
-    </>
-  );
-};
+
 
 export default Portfolio;
 // shadow-[0px_20px_20px_10px_#00000024]
