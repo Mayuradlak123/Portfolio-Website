@@ -1,6 +1,6 @@
 // Education.js
 import React from 'react';
-import {Rating} from "@mui/material"
+
 
 const Education = () => {
   return (
