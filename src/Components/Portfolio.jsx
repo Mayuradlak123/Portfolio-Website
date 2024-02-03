@@ -41,6 +41,7 @@ import Django from "./Logos/Django.png"
 import R_Native from "./Logos/Nativw.jpeg"
 import { experiences } from "../data";
 import SkillsContainer from "./pages/Skills";
+import Education from "./pages/Education";
 function Portfolio() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [name, setName] = useState();
@@ -301,7 +302,7 @@ function Portfolio() {
             </h2>
           </div>
           <div className="w-full lg:w-1/2 flex flex-col text-black justify-center">
-            <p className="text-lg lg:text-xl text-center text-justify px-2">
+            <p className="text-lg lg:text-xl  text-justify px-2">
               Passionate problem solver and innovative software developer. I
               thrive in collaborative environments, leveraging my skills to
               design and develop cutting-edge software applications.
@@ -329,7 +330,7 @@ function Portfolio() {
             </p>
           </div>
           <div className="">
-            <div className="flex w-full justify-center sm:flex-wrap sm:w-full flex-wrap flex  md:flex h-auto py-4 justify-center item-center mt-2  ">
+            <div className="flex w-full justify-center sm:flex-wrap sm:w-full flex-wrap   md:flex h-auto py-4  item-center mt-2  ">
               <Cards
                 Images={Hackerrenk}
                 URL={"https://www.hackerrank.com/mayuradlak030"}
@@ -360,8 +361,8 @@ function Portfolio() {
         >
           Acadmic Projects
         </h2>
-        <div className="project w-full h-auto flex-wrap flex justify-center item-center h-auto mt-8" id="projects">
-          <div className=" w-11/12  sm:w-1/2 md:w-1/4 p-2  shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea] m-2">
+        <div className="project w-full  flex-wrap flex justify-center item-center h-auto mt-8" id="projects">
+          <div className=" w-11/12  sm:w-1/2 md:w-1/4 p-2   shadow-[0px_5px_5px_2px_#b2f5ea] m-2">
             <img className="" src={NewsImage} alt="Project" />
             <div className="p-2 w-full text-center">
               <h3 className="text-xl text-black text-center font-medium">
@@ -378,7 +379,7 @@ function Portfolio() {
               </a>
             </div>
           </div>
-          <div className="w-11/12  sm:w-1/2 md:w-1/4 p-2 m-2 shadow-lg shadow-[0px_5px_5px_2px_#b2f5ea]">
+          <div className="w-11/12  sm:w-1/2 md:w-1/4 p-2 m-2  shadow-[0px_5px_5px_2px_#b2f5ea]">
             <img className="" src={Website} alt="Project" />
             <div className="p-2 w-full text-center">
               <h3 className="text-xl text-black font-medium text-center" >
@@ -430,7 +431,7 @@ function Portfolio() {
             </div>
           </div>
         </div>
-
+<Education/>
         <section
           className="container mx-auto px-4 py-8 w-full mt-8"
           id="experience"

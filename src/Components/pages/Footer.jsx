@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaGithub ,FaWhatsapp} from "react-icons/fa";
 function Footer() {
   return (
     <div>
@@ -8,13 +8,13 @@ function Footer() {
             <div className="mb-4 md:mb-0">
               <h3 className="text-xl font-bold text-center">Contact</h3>
               <p className="mt-2 text-md">
-                Phone:
+                Phone :
                 <a href="tel:9098002830" target="_blank" rel="noreferrer">
-                  +91 9098002830
+                 &nbsp; +91 9098002830
                 </a>
               </p>
               <p className="text-md">
-                Email:
+                Email : &nbsp;
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=mayuradlak030@gmail.com"
                   target="_blank"
@@ -40,6 +40,13 @@ function Footer() {
                   rel="noreferrer"
                 >
                   <FaLinkedin color="#0A66C2" className="text-4xl m-4" />
+                </a>
+                <a
+                  href="whatsapp://send?abid=phonenumber&text=Hello%2C%20World!"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaWhatsapp color="#24cc63" className="text-4xl m-4" />
                 </a>
                 <a
                   href="https://github.com/Mayuradlak123"

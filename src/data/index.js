@@ -3,7 +3,7 @@ export  const experiences = [
     {
       company: "38 Labs Private Limited",
       role: "Software Developer Intern",
-      duration: "10 Months (March 22 - Dec 22)",
+      duration: "1 Year (Jan 22 - Dec 22)",
       description: `Developed and deployed full-stack web applications using Python Django, React js, Node js, SQL, and AWS. Leveraged AWS services, such as EC2 and S3, to deploy and manage applications in a cloud.Through collaboration with a diverse team, I learned agile development methodologies, code review practices. Created CI & CD Pipelines for automate the process of testing and deployment using Jenkins.`,
     },
     {
