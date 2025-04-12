@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaGithub ,FaWhatsapp} from "react-ic
 function Footer() {
   return (
     <div>
-         <footer className=" shadow-[0px_20px_20px_10px_#f7fafc] bg-slate-300 text-black py-4 mt-8 pb-8">
+         <footer className=" shadow-[0px_20px_20px_10px_#f7fafc] bg-slate-300 text-black py-4  pb-8">
           <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
             <div className="mb-4 md:mb-0">
               <h3 className="text-xl font-bold text-center">Contact</h3>
@@ -66,8 +66,8 @@ function Footer() {
             </div>
             <div>
               <h3 className="text-md text-center font-bold">Address</h3>
-              <p className="mt-2 text-md">Kushwah Nagar </p>
-              <p className="text-md">Indore M.P. (452015)</p>
+              <p className="mt-2 text-md">JB Nagar Chakala </p>
+              <p className="text-md">Andheri East Mumbai - 400059 </p>
             </div>
           </div>
         </footer>
