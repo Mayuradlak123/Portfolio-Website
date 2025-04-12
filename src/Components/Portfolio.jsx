@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./portfolio.css";
 
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Footer from "./pages/Footer";
@@ -19,7 +19,6 @@ import Coding from "./pages/Coding";
 
 function Portfolio() {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   // Handle scroll for navbar effects

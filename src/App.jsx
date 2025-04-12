@@ -1,8 +1,7 @@
 import "./App.css";
-import HomePage from "./Components/Landing-Page/HomePage";
 import Portfolio from "./Components/Portfolio"
 
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
